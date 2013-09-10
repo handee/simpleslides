@@ -1,0 +1,10 @@
+Simple slides
+
+This is the most basic html/JavaScript slideshow I could make: 
+it aims for ease of code understanding, rather than technical excellence.
+
+I use it in lectures where I talk about HTML5 and JavaScript
+
+It is loosely based upon Rob Flaherty's much more impressive slideshow software
+If you want configurable and good looking slides, go to him:-)
+https://github.com/robflaherty/html-slideshow

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles.css" media="screen">
+<link rel="stylesheet" href="hannahprint.css" media="print">
+
+<script src="./htmlSlides.js"></script>
+<link rel="shortcut icon" href="../favicon.ico">
+
+<title>A JavaScript and HTML5 lecture example</title>
+</head>
+<body onLoad="buildShow();setInterval('clocktick()',1000);">
+<header>
+    <h1>JavaScript and HTML5 for interactive graphics: <span id="clock">&nbsp;</span></h1>
+<script>
+
+function clocktick() {
+//a very basic clock, to appear on the title bar.
+	var currentTime=new Date();
+	var currentHours=currentTime.getHours();
+	var currentMinutes=currentTime.getMinutes();
+	var currentSeconds=currentTime.getSeconds();
+	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+	var currentTimeString=currentHours+":"+currentMinutes+":"+currentSeconds;
+	document.getElementById('clock').firstChild.nodeValue = currentTimeString;
+}
+
+
+</script>
+
+    <nav>
+        <ul>
+            <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li>
+            <li><span id="slide-number"></span><span id="slide-total"></span></li>
+            <li><button id="next-btn" title="Next Slide">Next Slide</button></li>
+        </ul>
+    </nav>
+</header>
+<div id="deck">
+	<section>
+            <h1>HTML5 Slideshow example</h1>
+	    <ul>
+	<li>This is a sample slide show</li>
+<li>It has not got much content, really</li>
+<li>There is a sense in which it is a descendent of <a href="https://github.com/robflaherty/html-slideshow">Rob Flaherty's slideshow</a>; there's a sense in which I've taken his work and ripped out all the fancy nice stuff to make the simplest show ever though.</li> 
+	    </ul>
+	    </section>
+
+    <section>
+	<h1>Aims</h1>
+	<ul>
+		<li>An absolutely minimal HTML5 slideshow</li>
+		<li>Uses JavaScript (in htmlSlides.js)</li>
+		<li>Uses CSS (styles.css) to style it</li>
+		<li>Has a second CSS to enable easy customisation of look and feel</li>
+<li>Doesn't use... JQuery. Or anything else like that.</li>
+<li>One thing it does have that is above and beyond, in this file, is a clock.</li>
+<li>(That is because I often teach in a lecture theatre with no working clock).</li>
+	</ul>
+    </section>
+    <section>
+<ul>
+<li>To use, you need to have your HTML with a header featuring the navigation stuff (just copy this file)</li>
+<li>You need to have each slide in a section tag</li>
+<li>You need the javascript file, and the css file(s)</li>
+<li>That's it.</li>
+</ul>
+</section>
+
+</div>
+
+<!-- /deck -->
+</body>
+</html>
+

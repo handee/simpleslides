@@ -1,0 +1,52 @@
+html {
+	overflow:scroll;
+}
+
+body {
+background-color: white;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+margin-left:15%;
+font-size: 140%;
+}
+
+a {
+	color: #26a;
+	text-decoration: none;
+}
+
+
+a:hover {
+	background:#fe8;
+}
+img {
+  float:right;
+}
+
+
+section ol li {list-style-type: decimal; }
+section ul li {list-style-type: disc;}
+
+.right {
+  float:right;
+}
+
+p {
+ margin: 1ex;
+ padding: 1ex;
+}
+p.activity {
+  background:#ccc;
+}
+p.reading {
+  background:#fe8;
+}
+
+section {
+  margin: 1ex;
+  padding: 1ex;
+  background:#fff;
+}
+
+code {
+  font-family: courier, monospace;
+}
